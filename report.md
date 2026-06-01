@@ -7,7 +7,7 @@ student_name: 田梦婷
 major: 智能医学工程
 class: 23级2班
 agent_tools: Claude Code
-repository_url:
+repository_url: https://github.com/nlmckkkk3/medical-ai-agent-system
 demo_url:
 ---
 

@@ -42,8 +42,8 @@ streamlit run src/main.py
 ### 架构图
 ```
 User Input → Safety Agent → Router Agent → Business Agent → Reflection Agent → Output
-                    ↕                                       ↓
-              RAG Knowledge Base                     Quality Check + Retry
+                                              ↕                   ↓
+                                        RAG Knowledge Base   Quality Check + Retry
 ```
 
 ### 技术栈
