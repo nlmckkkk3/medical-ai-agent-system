@@ -104,7 +104,7 @@ def test_tc03_report_reading():
     output = result.get("output", "")
     assert len(output) > 0, "输出为空"
 
-    diagnostic_phrases = ["你得了", "你患了", "你的病是", "确诊"]
+    diagnostic_phrases = ["你得了", "你患了", "你的病是", "确诊为", "诊断为", "你应该是"]
     for phrase in diagnostic_phrases:
         assert phrase not in output, f"输出含诊断结论: '{phrase}' → {output[:200]}"
 

@@ -377,6 +377,18 @@ final-project/
 
 **采纳结果**：报告初稿的整体框架和大部分内容被采纳。第 5 节（工程实现）的项目结构、第 7 节（测试与评估）的测试用例设计在实际编码后可能需要根据代码实况微调。
 
+#### 样例 4：编码阶段的 Bug 排查协作
+
+**任务描述**：在实现 Streamlit UI 时，点击"开始分析"按钮后页面刷新导致 Agent 被重复初始化，产生死循环问题。
+
+**典型交互**：
+- AI 分析后指出：Streamlit 的 `st.button` 在页面 rerun 时会重置状态，建议将Agent 初始化与 session_state 管理解耦
+- 用户反馈"但我用 st.cache_resource 还是有问题"
+- AI 进一步排查发现：CSS 注入也使用了 session_state，导致缓存失效传播。最终采用 `if "agents" not in st.session_state`模式解决
+
+**采纳结果**：采纳了 AI 的 session_state 管理方案。AI 最初建议的 `st.cache_resource` 方案因 CSS注入副作用而失败，经用户反馈后修正。这个案例体现了"假设→验证→修正"的 AI 辅助调试模式。
+
+
 ### 6.4 人工审核与修改说明
 
 | 内容 | AI 建议 | 人工审核结果 |
