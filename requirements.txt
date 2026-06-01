@@ -1,0 +1,18 @@
+﻿streamlit>=1.28.0
+gradio>=4.0.0
+chromadb>=0.4.0
+sentence-transformers>=2.2.0
+pymupdf>=1.23.0
+python-dotenv>=1.0.0
+openai>=1.0.0
+Pillow>=10.0.0
+numpy>=1.24.0
+# OCR support (optional: local Tesseract fallback)
+pytesseract>=0.3.10
+
+# Model download for China (optional: needed when RAG_MODE=embedding)
+modelscope>=1.9.0
+
+# Testing (optional)
+pytest>=7.0.0
+

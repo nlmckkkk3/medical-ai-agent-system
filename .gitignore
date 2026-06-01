@@ -1,0 +1,42 @@
+# Environment & secrets
+.env
+*.env
+!*.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+.env/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project data (large / generated)
+data/chroma_db/
+data/models/
+data/temp/
+data/user_profiles/*.json
+
+# Streamlit
+.streamlit/
+
+# Test cache
+.pytest_cache/
